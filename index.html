@@ -24,12 +24,12 @@
             <input type="text" placeholder="Inserisci qui il tuo impegno">
             <button>Add</button>
             <div class="list">
-                <div class="content" v-for="elemento in lista">
+                <div class="content" v-for="(elemento, index) in lista">
                     <div class="container-item">
                         <span>{{elemento.impegno}}</span>
                         <div class="icons">
                             <i class="fas fa-edit"></i>
-                            <i class="fas fa-backspace"></i>
+                            <i class="fas fa-backspace" @click="cancella(index)"></i>
                         </div>
                     </div>
                 </div>

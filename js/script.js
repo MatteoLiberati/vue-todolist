@@ -37,7 +37,12 @@ const app = new Vue({
             },
     ]
     },
-    methods:{},
+    methods:{
+        cancella(index){
+            this.lista.splice(index,1);
+            console.log(this.lista[index]);
+        }
+    },
 
     // END APP VUE
 })
