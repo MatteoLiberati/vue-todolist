@@ -39,19 +39,38 @@ const app = new Vue({
         newItem: "",
     },
     methods:{
+
+        /**
+         * cancella al click l'elemento dalla lista
+         * @param {number} index indice array
+         */
         cancella(index){
             this.lista.splice(index,1);
             console.log(this.lista[index]);
         },
-        inserisci(){
-            this.lista.push({
-                impegno: this.newItem,
-                completato: false,
-            })
-            this.newItem = "";
-            this.$refs.input.focus();
-        }
-    },
 
+        /**
+         * inserisce l'elemento nella lista
+         */
+        inserisci(){
+            if(this.newItem != ""){
+                this.lista.push({
+                    impegno: this.newItem,
+                    completato: false,
+                })
+                this.newItem = "";
+                this.$refs.input.focus();
+            }
+        },
+
+        /**
+         * scambia il valore da true a false alla proprietà 
+         * completato dell'elemento
+         * @param {number} index indice array
+         */
+        completo(elemento){
+            elemento.completato = !elemento.completato;
+        },
+    },
     // END APP VUE
 })
