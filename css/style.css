@@ -65,14 +65,18 @@ body{
 
 /* LIST */
 .list{
-    margin-top: 30px
+    margin-top: 30px;
 }
 
-.list .content{
+.container-item{
     display: flex;
-    justify-content: space-around;
-    padding: 5px;
+    justify-content: space-between;
+    width: 70%;
+    margin: 0 auto;
+    padding: 8px;
+
 }
+
 .content:not(:last-child){
     border-bottom: 1px solid #0D0D0D;
     border-width: 4px;
@@ -80,7 +84,7 @@ body{
 
 .content span{
     position: relative;
-    max-width: 40px;
+    min-width: 50px;
     padding-left: 10px; ;
     cursor: pointer;
     transition: color .3s, transform.3s
