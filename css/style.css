@@ -45,16 +45,23 @@ body{
     outline: none;
     border-radius: 5px;
     text-overflow: ellipsis;
+    border: 2px solid transparent;
 }
 
 .container button{
     padding: 10px;
     background-color: #2445A6;
     color: #F2CA52;
-    border: none;
+    outline: none;
+    border: 2px solid transparent;
     border-radius: 50%;
     cursor: pointer;
     transition: background-color .3s, color .3s, transform .3s;
+}
+
+.container input:focus,
+.container button:focus{
+    border: 2px solid #F2CA52;
 }
 
 .container button:hover{

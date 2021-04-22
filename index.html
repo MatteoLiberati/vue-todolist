@@ -21,7 +21,7 @@
         <h1>Vue ToDo List</h1>
         <div class="container">
             <h2>Inserisci, modifica e organizza i tuoi impegni</h2>
-            <input v-model="newItem" @keyup.enter="inserisci" type="text" placeholder="Inserisci qui il tuo impegno">
+            <input ref="input" v-model="newItem" @keyup.enter="inserisci" type="text" placeholder="Inserisci qui il tuo impegno">
             <button @click="inserisci" >Add</button>
             <div class="list">
                 <div class="content" v-for="(elemento, index) in lista">

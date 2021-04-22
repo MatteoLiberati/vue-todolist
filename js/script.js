@@ -49,6 +49,7 @@ const app = new Vue({
                 completato: false,
             })
             this.newItem = "";
+            this.$refs.input.focus();
         }
     },
 
