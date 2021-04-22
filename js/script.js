@@ -5,42 +5,50 @@ const app = new Vue({
         lista:[
             {
                 impegno: 'Fare la spesa',
-                compleatato: false,
+                completato: false,
             },
             {
                 impegno: 'Cambiare password Google',
-                compleatato: false,
+                completato: false,
             },
             {
                 impegno: 'Ordinare piante giardino',
-                compleatato: true,
+                completato: true,
             },
             {
                 impegno: 'Sistemare profilo',
-                compleatato: false,
+                completato: false,
             },
             {
                 impegno: 'Organizzare festa Lorenzo',
-                compleatato: true,
+                completato: true,
             },
             {
                 impegno: 'Aggiustare cassa audio macchina',
-                compleatato: false,
+                completato: false,
             },
             {
                 impegno: 'Realizzare nuovo logo',
-                compleatato: false,
+                completato: false,
             },
             {
                 impegno: 'Lavare macchine',
-                compleatato: false,
+                completato: false,
             },
-    ]
+        ],
+        newItem: "",
     },
     methods:{
         cancella(index){
             this.lista.splice(index,1);
             console.log(this.lista[index]);
+        },
+        inserisci(){
+            this.lista.push({
+                impegno: this.newItem,
+                completato: false,
+            })
+            this.newItem = "";
         }
     },
 
